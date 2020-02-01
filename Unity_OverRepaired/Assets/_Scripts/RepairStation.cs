@@ -8,10 +8,11 @@ public class RepairStation : MonoBehaviour
     public float workTime;
     private float timer;
     public Transform placePosition;
-    public void work(RobotPart part)
+    public bool work(RobotPart part)
     {
         if (part.getCurrentRepair() == type)
         {
+            Debug.Log(timer);
             if (timer < workTime)
             {
                 timer += Time.deltaTime;
@@ -20,7 +21,9 @@ public class RepairStation : MonoBehaviour
             {
                 part.currentRepairDone();
             }
+            return true;
         }
+        return false;
     }
     public void resetWork()
     {

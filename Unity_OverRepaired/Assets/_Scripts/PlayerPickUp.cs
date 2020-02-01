@@ -48,21 +48,41 @@ public class PlayerPickUp : MonoBehaviour
                 findClosestFirst = true;
             }
 
-            if(interactObject == null)
+            if(interactObject != null && interactObject.layer == 12)
             {
-                DropObject(pickedUpGameobject);
-                pickedUp = false;
-                pickedUpGameobject = null;
+                if(interactObject.GetComponent<BrokenRobot>().setPart(pickedUpGameobject.GetComponent<RobotPart>()))
+                {
+                    pickedUp = false;
+                    pickedUpGameobject = null;
+                    interactObject = null;
+                    findClosestFirst = false;
+                    interact = false;
+                }
             }
             else
             {
-                interact = true;
-                finalPosition = interactObject.transform.GetChild(0).position;
-                pM.StopMovement();
+                if (interactObject == null)
+                {
+                    DropObject(pickedUpGameobject);
+                    pickedUp = false;
+                    pickedUpGameobject = null;
+                }
+                else
+                {
+                    interact = true;
+
+                    if (interactObject.GetComponent<RepairStation>().work(pickedUpGameobject.GetComponent<RobotPart>()))
+                    {
+                        finalPosition = interactObject.transform.GetChild(0).position;
+                        pM.StopMovement();
+                    }
+                }
             }
         }
         else if(Input.GetButtonUp(interactName))    
         {
+            interactObject?.GetComponent<RepairStation>()?.resetWork();
+
             interact = false;
             interactObject = null;
             findClosestFirst = false;
@@ -95,6 +115,7 @@ public class PlayerPickUp : MonoBehaviour
         if(interact)
         {
             Debug.Log("INTERACTING WOKRING");
+            
         }
         if (pickedUp)
         {

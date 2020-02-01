@@ -33,13 +33,22 @@ public class RobotPart : MonoBehaviour
 
     public string getCurrentRepair()
     {
-        return repairOrderStack.Peek();
+        if (repairOrderStack.Count > 0)
+        {
+            return repairOrderStack.Peek();
+        }
+        else
+        {
+            return "";
+        }
     }
 
     public void currentRepairDone()
     {
         if (repairOrderStack.Count > 0)
         {
+            Debug.Log("FINISHED");
+
             if (repairOrderStack.Count == 1)
             {
                 isBroken = false;

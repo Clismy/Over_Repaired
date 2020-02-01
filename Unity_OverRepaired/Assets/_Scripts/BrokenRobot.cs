@@ -32,7 +32,7 @@ public class BrokenRobot : MonoBehaviour
 
     public int[] randomBroken()
     {
-        int[] list = new[] { 0,1,2,3,4,5};
+        int[] list = new[] { 0,2,3,4,5};
         return list.OrderBy(x => Random.Range(0, parts.Length)).Take(howManyBrokenParts).ToArray();
     }
 
@@ -55,12 +55,18 @@ public class BrokenRobot : MonoBehaviour
         return null;
     }
 
-    public void setPart(RobotPart part)
+    public bool setPart(RobotPart part)
     {
-        if (!part.isBroken && transform.GetChild((int)part.whatPart).childCount > 0 )
+        if (!part.isBroken && transform.GetChild((int)part.whatPart).childCount == 0)
         {
+            part.transform.position = transform.GetChild((int)part.whatPart).position;
+            part.transform.rotation = transform.GetChild((int)part.whatPart).rotation;
+
             part.transform.parent = transform.GetChild((int)part.whatPart);
+            part.gameObject.layer = 0;
+            return true;
         }
+        return false;
     }
 
 }

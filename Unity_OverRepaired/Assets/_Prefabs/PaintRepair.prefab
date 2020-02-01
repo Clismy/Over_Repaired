@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 3822468105022387089}
   - component: {fileID: 6874845255708602066}
   - component: {fileID: 4359948901164980310}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: PaintRepair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
