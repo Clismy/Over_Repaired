@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1553182827932900326}
   - component: {fileID: -6252258903184026028}
   - component: {fileID: -7542472840760890332}
-  m_Layer: 11
+  m_Layer: 9
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -108,7 +108,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isBroken: 0
   repairOrder:
-  - Weld
+  - Screw
   - Screw
   - Hammer
   - Paint

@@ -50,7 +50,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8742148477790272537}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -109,6 +109,7 @@ MonoBehaviour:
   prefab: {fileID: 49623014331433302, guid: 3dce1dd8bcc15624fb889f301cf6027f, type: 3}
   SpawnTime: 10
   spawnPostion: {fileID: 8742148478369433514}
+  bph: {fileID: 0}
 --- !u!1 &8742148478369433509
 GameObject:
   m_ObjectHideFlags: 0

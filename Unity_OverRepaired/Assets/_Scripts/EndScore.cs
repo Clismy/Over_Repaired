@@ -27,7 +27,7 @@ public class EndScore : MonoBehaviour
 
     void Score()
     {
-        endScore.text = "Your Created " + scoreBored.Score + " Robots";
+        endScore.text = "You've Repaired " + scoreBored.Score + " Robots";
     }
 
     // Update is called once per frame
