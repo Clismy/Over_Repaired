@@ -48,7 +48,7 @@ public class PlayerPickUp : MonoBehaviour
                 findClosestFirst = true;
             }
 
-            if(interactObject != null && interactObject.layer == 12)
+            if(interactObject != null && interactObject.layer == 10)
             {
                 if(interactObject.GetComponent<BrokenRobot>().setPart(pickedUpGameobject.GetComponent<RobotPart>()))
                 {
@@ -73,12 +73,13 @@ public class PlayerPickUp : MonoBehaviour
 
                     if (interactObject.GetComponent<RepairStation>().work(pickedUpGameobject.GetComponent<RobotPart>()))
                     {
-                        finalPosition = interactObject.transform.GetChild(0).position;
+                        pickedUpGameobject.transform.position = interactObject.transform.GetChild(0).position;
                         pM.StopMovement();
                     }
                     else
                     {
                         pM.ContinueMovement();
+                        interact = false;
                     }
                 }
             }
@@ -100,7 +101,7 @@ public class PlayerPickUp : MonoBehaviour
             {
                 var closest = GetClosest(pickUpHits);
 
-                pickedUpGameobject = closest?.gameObject.layer == 12 ? closest?.GetComponent<BrokenRobot>()?.getPart()?.gameObject : closest?.gameObject;
+                pickedUpGameobject = closest?.gameObject.layer == 10 ? closest?.GetComponent<BrokenRobot>()?.getPart()?.gameObject : closest?.gameObject;
 
                 if (pickedUpGameobject != null)
                 {
@@ -122,10 +123,10 @@ public class PlayerPickUp : MonoBehaviour
             Debug.Log("INTERACTING WOKRING");
             
         }
-        if (pickedUp)
+        if (pickedUp && !interact)
         {
-            pickedUpGameobject.transform.position = Vector3.MoveTowards(pickedUpGameobject.transform.position, finalPosition, Time.deltaTime * pickUpSpeed);
-            pickedUpGameobject.transform.rotation = Quaternion.RotateTowards(pickedUpGameobject.transform.rotation, pickUpPosition.rotation, Time.deltaTime * pickUpSpeed);
+            pickedUpGameobject.transform.position = finalPosition;
+            pickedUpGameobject.transform.rotation = pickUpPosition.rotation;
         }
     }
 

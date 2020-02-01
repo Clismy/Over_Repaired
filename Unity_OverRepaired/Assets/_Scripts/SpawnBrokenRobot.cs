@@ -12,8 +12,7 @@ public class SpawnBrokenRobot : MonoBehaviour
 
     public void Start()
     {
-        SpawnRobot();
-        timer = 0;
+        timer = 5;
     }
 
     public void Update()

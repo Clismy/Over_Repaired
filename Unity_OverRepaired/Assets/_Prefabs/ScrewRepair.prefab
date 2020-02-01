@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3405804317423499459}
   - component: {fileID: 7050276101125883559}
   - component: {fileID: 7160634391900691345}
-  m_Layer: 13
+  m_Layer: 11
   m_Name: ScrewRepair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50,7 +50,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3399675050814278808}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -108,7 +108,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: Screw
   workTime: 2
+  timer: 0
   placePosition: {fileID: 8500381370793875735}
+  ProgressBar: {fileID: 0}
 --- !u!1 &6587420492667452045
 GameObject:
   m_ObjectHideFlags: 0

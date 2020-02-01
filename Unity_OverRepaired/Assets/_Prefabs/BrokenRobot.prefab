@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2914723612386305266}
   - component: {fileID: 49623014331433302}
   - component: {fileID: -5070487012137360993}
-  m_Layer: 12
+  m_Layer: 10
   m_Name: BrokenRobot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 1492821954673884588}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 4013053312772723160}
   - {fileID: 6087127890376866417}
@@ -57,7 +57,7 @@ MonoBehaviour:
   - {fileID: 1761974379072320822, guid: a3cc2dcff21d9484e9946f2662f6fde9, type: 3}
   - {fileID: 2259385937061793482, guid: f5d9e621ca4d4714a859bc8e5d666e3e, type: 3}
   - {fileID: -6224652603078791763, guid: 79992109e4326534c9a9ba17f2c515a0, type: 3}
-  speed: 0.3
+  speed: 1.5
   howManyBrokenParts: 2
 --- !u!65 &-5070487012137360993
 BoxCollider:
