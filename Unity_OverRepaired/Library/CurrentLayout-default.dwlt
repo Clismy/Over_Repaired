@@ -47,7 +47,15 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 322}
   m_MaxSize: {x: 12008, y: 8022}
   vertical: 0
+<<<<<<< HEAD
   controlID: 45
+=======
+<<<<<<< HEAD
+  controlID: 30
+=======
+  controlID: 130
+>>>>>>> master
+>>>>>>> master
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -65,10 +73,22 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1531
     y: 0
-    width: 389
-    height: 948
+<<<<<<< HEAD
+    width: 386
+    height: 932
   m_MinSize: {x: 277, y: 72}
   m_MaxSize: {x: 4002, y: 4022}
+=======
+    width: 389
+    height: 948
+<<<<<<< HEAD
+  m_MinSize: {x: 277, y: 72}
+  m_MaxSize: {x: 4002, y: 4022}
+=======
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
+>>>>>>> master
+>>>>>>> master
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -218,7 +238,15 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 322}
   m_MaxSize: {x: 8006, y: 8022}
   vertical: 1
+<<<<<<< HEAD
   controlID: 46
+=======
+<<<<<<< HEAD
+  controlID: 31
+=======
+  controlID: 64
+>>>>>>> master
+>>>>>>> master
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -243,7 +271,15 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 222}
   m_MaxSize: {x: 8006, y: 4022}
   vertical: 0
+<<<<<<< HEAD
   controlID: 47
+=======
+<<<<<<< HEAD
+  controlID: 32
+=======
+  controlID: 65
+>>>>>>> master
+>>>>>>> master
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -337,20 +373,32 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/_Scripts
+    - Assets/_Prefabs
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/_Scripts
+  - Assets/_Prefabs
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\b18chrka\Github\Over_Repaired\Unity_OverRepaired
+  m_LastProjectPath: P:\OverRepairedRepo\OverRepairedPlzWork\OverRepaired\Over_Repaired\Unity_OverRepaired
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
     m_SelectedIDs: a02f0000
     m_LastClickedID: 12192
     m_ExpandedIDs: 00000000142e000000ca9a3b
+=======
+<<<<<<< HEAD
+    m_SelectedIDs: dc2e0000
+    m_LastClickedID: 11996
+    m_ExpandedIDs: 00000000cc2e000000ca9a3b
+=======
+    m_SelectedIDs: 022e0000
+    m_LastClickedID: 11778
+    m_ExpandedIDs: 00000000c42c000000ca9a3b
+>>>>>>> master
+>>>>>>> master
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -378,7 +426,15 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000142e0000
+=======
+<<<<<<< HEAD
+    m_ExpandedIDs: 00000000cc2e0000
+=======
+    m_ExpandedIDs: 00000000c42c0000
+>>>>>>> master
+>>>>>>> master
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -403,9 +459,15 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
+<<<<<<< HEAD
     m_SelectedInstanceIDs: 58330000
     m_LastClickedInstanceID: 13144
     m_HadKeyboardFocusLastEvent: 0
+=======
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
+    m_HadKeyboardFocusLastEvent: 1
+>>>>>>> master
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -422,7 +484,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
+      m_ClientGUIView: {fileID: 7}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -499,9 +561,18 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
       m_SelectedIDs: 58320000
       m_LastClickedID: 12888
+=======
+      m_SelectedIDs: 96daffff
+      m_LastClickedID: 0
+<<<<<<< HEAD
+      m_ExpandedIDs: 3cecffff64f8ffff72f8ffff94f8ffff
+=======
+>>>>>>> master
       m_ExpandedIDs: 78fbffff
+>>>>>>> master
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -596,9 +667,21 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: -0.24964057, y: -0.0023268587, z: 0.00059988786, w: -0.96833557}
   m_Size:
+<<<<<<< HEAD
     m_Target: 20.94499
     speed: 2
     m_Value: 20.94499
+=======
+<<<<<<< HEAD
+    m_Target: 6.0160704
+    speed: 2
+    m_Value: 6.0160704
+=======
+    m_Target: 25.180635
+    speed: 2
+    m_Value: 25.180635
+>>>>>>> master
+>>>>>>> master
   m_Ortho:
     m_Target: 0
     speed: 2
