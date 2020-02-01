@@ -15,6 +15,7 @@ public class BrokenRobot : MonoBehaviour
     {
         for (int i = 0; i < 6; i++) {
            var temp = Instantiate(parts[i], transform.GetChild(i));
+            temp.CreatePart();
             temp.gameObject.layer = 0;
         }
         var brokenParts = randomBroken();

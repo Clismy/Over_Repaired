@@ -154,7 +154,7 @@ Transform:
   m_GameObject: {fileID: 932469800451437617}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 5.14, y: 0.77, z: 2.58}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 932469799104857857}
   - {fileID: 932469799715427130}
@@ -248,7 +248,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fa7a33ce3d09c7438dc4f07782f3f69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 6
+  movementSpeed: 10
   acceleration: 24
   deAcceleration: 24
   secondPlayer: 1
@@ -269,12 +269,12 @@ MonoBehaviour:
   sphereRadius: 2
   collideWithPickUp:
     serializedVersion: 2
-    m_Bits: 6144
+    m_Bits: 1536
   collideWithWorkBench:
     serializedVersion: 2
-    m_Bits: 12288
+    m_Bits: 3072
   pickdUpLayer: 0
-  droppedLayer: 11
+  droppedLayer: 9
   secondPlayer: 1
 --- !u!1 &932469800512002196
 GameObject:

@@ -32,7 +32,7 @@ public class SpawnBrokenRobot : MonoBehaviour
     {
        var tempRob = Instantiate(prefab, spawnPostion);
         tempRob.CreateRobot();
-        bph.CheckBluePrint(tempRob.getParts());
+         bph.CreateBluePrints(tempRob.getParts());
 
     }
 }

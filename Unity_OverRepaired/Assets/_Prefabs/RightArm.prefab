@@ -128,4 +128,5 @@ MonoBehaviour:
   - Screw
   - Weld
   - Paint
+  randomAmount: 1
   whatPart: 3

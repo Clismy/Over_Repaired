@@ -8,8 +8,9 @@ public class RobotPart : MonoBehaviour
     public bool isBroken = false;
 
     [SerializeField]
-    private string[] repairOrder = new string[4];
-    private Stack<string> repairOrderStack = new Stack<string>();
+    public string[] repairOrder = new string[4];
+    public Stack<string> repairOrderStack = new Stack<string>();
+    public bool randomAmount = true;
 
     [Serializable]
     public enum parts
@@ -23,11 +24,19 @@ public class RobotPart : MonoBehaviour
     }
     public parts whatPart;
 
-    public void Start()
+    public void CreatePart()
     {
         for (int i = repairOrder.Length - 1; i >= 0; i--)
         {
             repairOrderStack.Push(repairOrder[i]);
+        }
+        if (randomAmount)
+        {
+            int rand = UnityEngine.Random.Range(0, 4);
+            for (int u = 0; u < rand; u++)
+            {
+                repairOrderStack.Pop();
+            }
         }
     }
 

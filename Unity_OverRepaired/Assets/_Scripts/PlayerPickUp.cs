@@ -117,12 +117,6 @@ public class PlayerPickUp : MonoBehaviour
             }
         }
 
-
-        if(interact)
-        {
-            Debug.Log("INTERACTING WOKRING");
-            
-        }
         if (pickedUp && !interact)
         {
             pickedUpGameobject.transform.position = finalPosition;
@@ -139,7 +133,7 @@ public class PlayerPickUp : MonoBehaviour
     void ThrowObject(GameObject objectToThrow)
     {
         objectToThrow.GetComponent<Rigidbody>().isKinematic = false;
-        objectToThrow.GetComponent<Rigidbody>().AddForce(transform.forward * 15, ForceMode.Impulse);
+        objectToThrow.GetComponent<Rigidbody>().AddForce(transform.forward * 30, ForceMode.Impulse);
 
         objectToThrow.GetComponent<Collider>().isTrigger = false;
         objectToThrow.layer = droppedLayer;

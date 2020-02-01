@@ -1,5 +1,93 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1379081016
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1379081017}
+  - component: {fileID: 1379081020}
+  - component: {fileID: 1379081019}
+  - component: {fileID: 1379081018}
+  m_Layer: 5
+  m_Name: Work_Progress_Player_2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1379081017
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1379081016}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7696393668207466221}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.4782456, y: 0.45378786}
+  m_AnchorMax: {x: 0.5217544, y: 0.5481061}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &1379081020
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1379081016}
+  m_CullTransparentMesh: 0
+--- !u!114 &1379081019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1379081016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.7607843}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: 935e19c1547010740b680b1ded4c7ca6, type: 3}
+  m_Type: 3
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 0.839
+  m_FillClockwise: 0
+  m_FillOrigin: 2
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1379081018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1379081016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9faff343470e048489db08c905db9c9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2891169727063538
 GameObject:
   m_ObjectHideFlags: 0
@@ -5068,9 +5156,9 @@ RectTransform:
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.24049126, y: 0.18951236}
-  m_AnchoredPosition: {x: -37, y: 0}
-  m_SizeDelta: {x: -74, y: 0}
+  m_AnchorMax: {x: 0.1553913, y: 0.15055121}
+  m_AnchoredPosition: {x: -28.069977, y: -13.320007}
+  m_SizeDelta: {x: -56.14, y: -26.64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7696393668184937408
 CanvasRenderer:
@@ -5145,6 +5233,7 @@ RectTransform:
   - {fileID: 7696393668184937410}
   - {fileID: 7696393669775610343}
   - {fileID: 7696393668787646887}
+  - {fileID: 1379081017}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5162,7 +5251,7 @@ Canvas:
   m_GameObject: {fileID: 7696393668207466217}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 1
@@ -5250,10 +5339,10 @@ RectTransform:
   m_Father: {fileID: 7696393669204326236}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 65}
-  m_SizeDelta: {x: 0, y: -130}
+  m_AnchorMin: {x: 0, y: 0.7362051}
+  m_AnchorMax: {x: 0.80460876, y: 1}
+  m_AnchoredPosition: {x: -42.200012, y: 31.100006}
+  m_SizeDelta: {x: -84.399994, y: -62.300003}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &7696393668258291472
 MonoBehaviour:
@@ -5722,7 +5811,7 @@ GameObject:
   - component: {fileID: 7696393668787646885}
   - component: {fileID: 7696393668787646884}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: Work_Progress_Player_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5775,7 +5864,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 163bc52aab3b94842b1bedc17c582d3f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 935e19c1547010740b680b1ded4c7ca6, type: 3}
   m_Type: 3
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -6310,6 +6399,7 @@ GameObject:
   - component: {fileID: 7696393669204326236}
   - component: {fileID: 7696393669204326227}
   - component: {fileID: 7696393669204326226}
+  - component: {fileID: 1193609888}
   m_Layer: 5
   m_Name: BluePrints
   m_TagString: Untagged
@@ -6332,10 +6422,10 @@ RectTransform:
   m_Father: {fileID: 7696393668207466221}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.76059014}
+  m_AnchorMin: {x: 0, y: 0.83500004}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -194}
-  m_SizeDelta: {x: 0, y: 388}
+  m_AnchoredPosition: {x: 0, y: -224.2}
+  m_SizeDelta: {x: 0, y: 448.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7696393669204326227
 CanvasRenderer:
@@ -6375,6 +6465,25 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1193609888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7696393669204326239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f59bcabeaf56bb47876458a2e5defca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bluePrintHolder:
+  - {fileID: 7696393669547616246}
+  - {fileID: 9205006759369747485}
+  - {fileID: 8324162104563327952}
+  - {fileID: 6950646692675647649}
+  - {fileID: 2203947495772499164}
+  - {fileID: 2648355554469900901}
 --- !u!1 &7696393669385115139
 GameObject:
   m_ObjectHideFlags: 0

@@ -112,6 +112,7 @@ MonoBehaviour:
   - Screw
   - Weld
   - Paint
+  randomAmount: 1
   whatPart: 4
 --- !u!54 &-9019498812717130505
 Rigidbody:

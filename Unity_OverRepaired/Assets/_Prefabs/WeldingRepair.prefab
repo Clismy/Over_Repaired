@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3702841475638879785}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.7, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4207902579124904568}
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 5456419269781831687}
   - component: {fileID: 7273332440326466370}
   - component: {fileID: 1550025246178365552}
-  m_Layer: 13
+  m_Layer: 11
   m_Name: WeldingRepair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -80,7 +80,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4215871516318269968}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -122,8 +122,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.022351949, y: 0.021308696, z: 0.15297388}
+  m_Center: {x: 0.000099160716, y: 0.00004245981, z: -0.06916166}
 --- !u!114 &1550025246178365552
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,4 +138,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: Weld
   workTime: 2
+  timer: 0
   placePosition: {fileID: 2424629390320823367}
+  ProgressBar: {fileID: 0}
