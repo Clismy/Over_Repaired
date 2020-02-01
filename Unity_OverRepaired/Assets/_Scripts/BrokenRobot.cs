@@ -11,7 +11,7 @@ public class BrokenRobot : MonoBehaviour
     public int howManyBrokenParts;
 
 
-    public void Start()
+    public void CreateRobot()
     {
         for (int i = 0; i < 6; i++) {
            var temp = Instantiate(parts[i], transform.GetChild(i));
@@ -23,6 +23,26 @@ public class BrokenRobot : MonoBehaviour
             transform.GetChild(brokenParts[y]).GetChild(0).GetComponent<RobotPart>().isBroken = true;
         }
     }
+
+    public RobotPart[] getParts()
+    {
+        RobotPart[] tempList = new RobotPart[6];
+        for (int i = 0; i < 6; i++)
+        {
+            var temp = transform.GetChild(i).childCount;
+            if (temp > 0)
+            {
+                var tempRobotPart = transform.GetChild(i).GetChild(0).GetComponent<RobotPart>();
+                if (tempRobotPart != null)
+                {
+                    tempList[i] = tempRobotPart;
+
+                }
+            }
+        }
+        return tempList;
+    }
+
 
     public void Update()
     {

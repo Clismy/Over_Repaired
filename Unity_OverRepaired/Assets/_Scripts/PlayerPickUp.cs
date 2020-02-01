@@ -76,6 +76,10 @@ public class PlayerPickUp : MonoBehaviour
                         finalPosition = interactObject.transform.GetChild(0).position;
                         pM.StopMovement();
                     }
+                    else
+                    {
+                        pM.ContinueMovement();
+                    }
                 }
             }
         }
