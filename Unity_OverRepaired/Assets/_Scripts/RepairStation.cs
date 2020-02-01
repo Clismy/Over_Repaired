@@ -6,10 +6,12 @@ public class RepairStation : MonoBehaviour
 {
     [SerializeField] string type;
     public float workTime;
-    private float timer;
+    public float timer;
     public Transform placePosition;
+    public WorkProgress ProgressBar;
     public bool work(RobotPart part)
     {
+        ProgressBar.Working(this);
         if (part.getCurrentRepair() == type)
         {
             Debug.Log(timer);
