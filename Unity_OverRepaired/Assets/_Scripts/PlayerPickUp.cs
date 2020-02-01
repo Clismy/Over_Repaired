@@ -112,6 +112,7 @@ public class PlayerPickUp : MonoBehaviour
             }
         }
 
+
         if(interact)
         {
             Debug.Log("INTERACTING WOKRING");

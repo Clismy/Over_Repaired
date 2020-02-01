@@ -408,7 +408,7 @@ MonoBehaviour:
     m_Bits: 6144
   collideWithWorkBench:
     serializedVersion: 2
-    m_Bits: 8192
+    m_Bits: 12288
   pickdUpLayer: 0
   droppedLayer: 11
   secondPlayer: 1

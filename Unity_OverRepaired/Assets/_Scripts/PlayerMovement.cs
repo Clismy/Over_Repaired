@@ -36,9 +36,31 @@ public class PlayerMovement : MonoBehaviour
     void Move()
     {
         float horizontal = secondPlayer == false ? Input.GetAxisRaw("Horizontal1") : Input.GetAxisRaw("Horizontal2");
-        float vertical =  secondPlayer == false ? Input.GetAxisRaw("Vertical1") : Input.GetAxisRaw("Vertical2");
+        float vertical = secondPlayer == false ? Input.GetAxisRaw("Vertical1") : Input.GetAxisRaw("Vertical2");
 
-        input = new Vector3(GetAcceleratedInput(horizontal, input.x), 0f , GetAcceleratedInput(vertical, input.z));
+        Vector2 beforeInput = new Vector2(horizontal, vertical);
+      
+        if (!secondPlayer)
+        {
+            if (hinput.gamepad[0].leftStick.position != Vector2.zero)
+            {
+                beforeInput = hinput.gamepad[0].leftStick.position;
+            }
+        }
+        else if(secondPlayer)
+        {
+            if (hinput.gamepad[1].leftStick.position != Vector2.zero)
+            {
+                beforeInput = hinput.gamepad[1].leftStick.position;
+            }
+        }
+
+        if (stopMoving)
+        {
+            beforeInput = Vector2.zero;
+        }
+
+        input = new Vector3(GetAcceleratedInput(beforeInput.x, input.x), 0f , GetAcceleratedInput(beforeInput.y, input.z));
 
         Vector3 moveDirection = input.normalized * movementSpeed;
 
@@ -54,11 +76,11 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Mathf.Abs(newInput) > 0)
         {
-            int direction = SetDirection(newInput, oldInput);
+            //int direction = SetDirection(newInput, oldInput);
 
             float speed = movementSpeed;
 
-            oldInput = Mathf.MoveTowards(oldInput, direction, acceleration * Time.deltaTime);
+            oldInput = Mathf.MoveTowards(oldInput, newInput, acceleration * Time.deltaTime);
         }
         else
         {
