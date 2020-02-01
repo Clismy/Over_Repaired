@@ -23,12 +23,13 @@ public class BluePrintHandler : MonoBehaviour
         {
             if (!bluePrintHolder[i].activeSelf)
             {
-                bluePrintHolder[i].SetActive(true);
                 for (int j = 0; j < robotPart.Length; j++)
                 {
                     if (robotPart[j].isBroken)
                     {
+                        Debug.Log(robotPart[j].whatPart.ToString());
                         List<GameObject> templimb = bluePrintHolder[i].GetComponent<LimbCheck>().limbs;
+                        Debug.Log(templimb.Count);
                         for (int k = 0; k < templimb.Count; k++)
                         {
                             if (templimb[k].name == robotPart[j].whatPart.ToString())
@@ -39,6 +40,8 @@ public class BluePrintHandler : MonoBehaviour
                         }
                     }
                 }
+                bluePrintHolder[i].SetActive(true);
+                return;
             }
         }
             
