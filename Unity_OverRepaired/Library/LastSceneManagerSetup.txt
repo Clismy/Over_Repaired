@@ -1,5 +1,9 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/_Scenes/PeterProg.unity
+=======
+- path: Assets/_Scenes/PersScene.unity
+>>>>>>> master
   isLoaded: 1
   isActive: 1
   isSubScene: 0
