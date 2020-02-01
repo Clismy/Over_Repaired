@@ -9,7 +9,13 @@ public class AudioManager : MonoBehaviour
     public string robotMove;
     FMOD.Studio.EventInstance RobotMove;
     FMOD.Studio.ParameterInstance Stop;
-    
+
+    [EventRef]
+    public string robotPickup;
+
+    [EventRef]
+    public string robotThrow;
+
     public void RobotMoveStart()
     {
         RobotMove = FMODUnity.RuntimeManager.CreateInstance(robotMove);
@@ -20,6 +26,16 @@ public class AudioManager : MonoBehaviour
     public void RobotMoveStop()
     {
         Stop.setValue(1.0f);
+    }
+
+    public void RobotPickup()
+    {
+        RuntimeManager.PlayOneShot(robotPickup, transform.position);
+    }
+
+    public void RobotThrow()
+    {
+        RuntimeManager.PlayOneShot(robotThrow, transform.position);
     }
 
 }

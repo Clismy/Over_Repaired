@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: G:\RobotRepair\FMOD\RobotRepair\RobotRepair.fspro
-  SourceProjectPathUnformatted: G:\RobotRepair\FMOD\RobotRepair\RobotRepair.fspro
-  SourceBankPathUnformatted: G:\RobotRepair\FMOD\RobotRepair\Build
+  sourceProjectPath: F:\RobotRepair\FMOD\RobotRepair\RobotRepair.fspro
+  SourceProjectPathUnformatted: F:\RobotRepair\FMOD\RobotRepair\RobotRepair.fspro
+  SourceBankPathUnformatted: F:\RobotRepair\FMOD\RobotRepair\Build
   AutomaticEventLoading: 1
   AutomaticSampleLoading: 0
   ImportType: 0
@@ -59,6 +59,7 @@ MonoBehaviour:
   - Platform: 2
     Value: 32
   Plugins: []
-  MasterBanks: []
+  MasterBanks:
+  - Master Bank
   Banks: []
   LiveUpdatePort: 9264
