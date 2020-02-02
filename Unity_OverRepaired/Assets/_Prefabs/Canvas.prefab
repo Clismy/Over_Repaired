@@ -496,7 +496,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0.1553913, y: 0.15055121}
-  m_AnchoredPosition: {x: -27.099976, y: 16.700012}
+  m_AnchoredPosition: {x: -27.100006, y: 16.700012}
   m_SizeDelta: {x: 111.23, y: 158.76}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3537815829061932197
@@ -877,12 +877,12 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 37527117b9961444c8b4f7bf9a576f20, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 935e19c1547010740b680b1ded4c7ca6, type: 3}
   m_Type: 3
   m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
-  m_FillAmount: 1
+  m_FillAmount: 0.839
   m_FillClockwise: 0
   m_FillOrigin: 2
   m_UseSpriteMesh: 0
@@ -1103,7 +1103,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.39324558, y: 0.37134704}
   m_AnchorMax: {x: 0.5932037, y: 0.566653}
-  m_AnchoredPosition: {x: 0.069999695, y: 0.010002136}
+  m_AnchoredPosition: {x: 0.069999695, y: 0.010000229}
   m_SizeDelta: {x: 0.62000084, y: -0.53999996}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3537815829914421722
@@ -1338,10 +1338,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 658e221329b0c5d46b3c14355b898753, type: 3}
   - {fileID: 21300000, guid: bbabafe635a417e4f87a21e76e6c699f, type: 3}
   - {fileID: 21300000, guid: 8e6375d261f376c4daa97de9b575981c, type: 3}
-  robotSprites:
-  - {fileID: 21300000, guid: 0876dc837708aef45806893c13b613ae, type: 3}
-  - {fileID: 21300000, guid: 1b4ec946c7db93945837b7678d2ac05c, type: 3}
-  - {fileID: 21300000, guid: 41cdc2cea465ac647ac3d076d4b9b9c1, type: 3}
 --- !u!1 &3537815830303579666
 GameObject:
   m_ObjectHideFlags: 0
@@ -1518,7 +1514,6 @@ MonoBehaviour:
   - {fileID: 6617984142020749534}
   - {fileID: 6617984141913754319}
   - {fileID: 6617984140487804240}
-  robotPart: {fileID: 8030294587486308096}
 --- !u!1 &3537815830510911903
 GameObject:
   m_ObjectHideFlags: 0
@@ -2416,7 +2411,6 @@ MonoBehaviour:
   - {fileID: 6617984141649700092}
   - {fileID: 6617984141468283627}
   - {fileID: 6617984141112536843}
-  robotPart: {fileID: 843263631858597428}
 --- !u!1 &6617984140150547206
 GameObject:
   m_ObjectHideFlags: 0
@@ -2908,7 +2902,6 @@ MonoBehaviour:
   - {fileID: 6617984141803133818}
   - {fileID: 6617984140799406344}
   - {fileID: 6617984140087991148}
-  robotPart: {fileID: 2457986530617901646}
 --- !u!1 &6617984140660293876
 GameObject:
   m_ObjectHideFlags: 0
@@ -3736,7 +3729,6 @@ MonoBehaviour:
   - {fileID: 6617984142061940794}
   - {fileID: 6617984140070179160}
   - {fileID: 6617984140223922756}
-  robotPart: {fileID: 6777996031456935737}
 --- !u!1 &6617984141112536846
 GameObject:
   m_ObjectHideFlags: 0
@@ -4320,12 +4312,12 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 37527117b9961444c8b4f7bf9a576f20, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 935e19c1547010740b680b1ded4c7ca6, type: 3}
   m_Type: 3
   m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
-  m_FillAmount: 0
+  m_FillAmount: 0.755
   m_FillClockwise: 0
   m_FillOrigin: 2
   m_UseSpriteMesh: 0
@@ -4619,7 +4611,6 @@ MonoBehaviour:
   - {fileID: 6617984140464603425}
   - {fileID: 6617984140660293873}
   - {fileID: 6617984140842206285}
-  robotPart: {fileID: 8626443112695705406}
 --- !u!1 &6617984141913754322
 GameObject:
   m_ObjectHideFlags: 0
@@ -5075,7 +5066,6 @@ MonoBehaviour:
   - {fileID: 6617984141086222453}
   - {fileID: 6617984140291924747}
   - {fileID: 6617984140885946223}
-  robotPart: {fileID: 4537674944697657544}
 --- !u!1 &6617984142108295360
 GameObject:
   m_ObjectHideFlags: 0
