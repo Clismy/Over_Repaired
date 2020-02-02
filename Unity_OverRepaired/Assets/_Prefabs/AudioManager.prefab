@@ -118,6 +118,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4781436244100360023}
   - component: {fileID: 4781436244100360016}
+  - component: {fileID: 1719200559006783999}
+  - component: {fileID: 1105700310037377817}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -153,6 +155,59 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e16032dcb7761ad48bc873aa89139f61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  robotMove: event:/SFX/Robot/RobotMove
+  playerMovement1: {fileID: 0}
+  playerMovement2: {fileID: 0}
+  robotMove1: {fileID: 1719200559006783999}
+  robotMove2: {fileID: 1105700310037377817}
   robotPickup: event:/SFX/Robot/RobotPickup
   robotThrow: event:/SFX/Robot/RobotThrow
+  hammer: event:/SFX/Tools/Hammer
+  weld: event:/SFX/Tools/Welding
+  screw: event:/SFX/Tools/Powerdrill
+  paint: 
+--- !u!114 &1719200559006783999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4781436244100360022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/SFX/Robot/RobotMove1
+  PlayEvent: 0
+  StopEvent: 0
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
+--- !u!114 &1105700310037377817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4781436244100360022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/SFX/Robot/RobotMove2
+  PlayEvent: 0
+  StopEvent: 0
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
