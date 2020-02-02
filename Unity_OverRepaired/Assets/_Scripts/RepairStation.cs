@@ -11,6 +11,7 @@ public class RepairStation : MonoBehaviour
     public WorkProgress ProgressBar;
     public Vector3 lookDirection;
     [SerializeField] AudioManager audioManager;
+    bool playSoundOnce = false;
 
     public bool work(RobotPart part)
     {
@@ -18,7 +19,11 @@ public class RepairStation : MonoBehaviour
         if (part.getCurrentRepair() == type)
         {
             Debug.Log(timer);
-            audioManager?.Workstation(type);
+            if(!playSoundOnce)
+            {
+                audioManager?.Workstation(type);
+                playSoundOnce = true;
+            }
             if (timer < workTime)
             {
                 timer += Time.deltaTime;
@@ -26,9 +31,11 @@ public class RepairStation : MonoBehaviour
             else
             {
                 part.currentRepairDone();
+                playSoundOnce = false;
             }
             return true;
         }
+        playSoundOnce = false;
         return false;
     }
     public void resetWork()

@@ -363,6 +363,11 @@ PrefabInstance:
       propertyPath: lookDirection.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1550025246178365552, guid: 9c61b6633e2e77a448e045751ab29ce4,
+        type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 4781436244425843421}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c61b6633e2e77a448e045751ab29ce4, type: 3}
 --- !u!4 &47222295 stripped
@@ -800,6 +805,11 @@ PrefabInstance:
       propertyPath: lookDirection.y
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 2282714806671523790, guid: 4d8fac2d5f76ed040ad34e8686a995e9,
+        type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 4781436244425843421}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d8fac2d5f76ed040ad34e8686a995e9, type: 3}
 --- !u!4 &120072574 stripped
@@ -2869,6 +2879,11 @@ PrefabInstance:
       propertyPath: lookDirection.y
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 7160634391900691345, guid: 6244036c7638a0d4f8ff5fa3feaee2d8,
+        type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 4781436244425843421}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6244036c7638a0d4f8ff5fa3feaee2d8, type: 3}
 --- !u!4 &406770246 stripped
@@ -3603,6 +3618,11 @@ PrefabInstance:
       propertyPath: lookDirection.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4359948901164980310, guid: c2edb2db758cb2c4b98837aa9b40da43,
+        type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 4781436244425843421}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2edb2db758cb2c4b98837aa9b40da43, type: 3}
 --- !u!4 &503639480 stripped
@@ -6563,14 +6583,19 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &1028402846
-AudioListener:
+--- !u!114 &1028402846
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1028402844}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ListenerNumber: 0
 --- !u!4 &1028402847
 Transform:
   m_ObjectHideFlags: 0
