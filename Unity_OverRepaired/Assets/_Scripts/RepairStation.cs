@@ -12,10 +12,12 @@ public class RepairStation : MonoBehaviour
     public Vector3 lookDirection;
     [SerializeField] AudioManager audioManager;
     bool playSoundOnce = false;
+    public ParticleSystem system;
 
     public bool work(RobotPart part)
     {
         ProgressBar.Working(this);
+        system.Play();
         if (part.getCurrentRepair() == type)
         {
             Debug.Log(timer);
@@ -31,6 +33,7 @@ public class RepairStation : MonoBehaviour
             else
             {
                 part.currentRepairDone();
+                system.Pause();
                 playSoundOnce = false;
             }
             return true;

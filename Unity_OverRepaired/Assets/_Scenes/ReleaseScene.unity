@@ -676,7 +676,7 @@ PrefabInstance:
         type: 3}
       propertyPath: ProgressBar
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1663236239}
     - target: {fileID: 2282714806671523790, guid: 4d8fac2d5f76ed040ad34e8686a995e9,
         type: 3}
       propertyPath: lookDirection.z
@@ -692,6 +692,11 @@ PrefabInstance:
       propertyPath: audioManager
       value: 
       objectReference: {fileID: 358712657}
+    - target: {fileID: 2282714806671523790, guid: 4d8fac2d5f76ed040ad34e8686a995e9,
+        type: 3}
+      propertyPath: system
+      value: 
+      objectReference: {fileID: 502785955}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d8fac2d5f76ed040ad34e8686a995e9, type: 3}
 --- !u!4 &102837108 stripped
@@ -2991,6 +2996,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 19b872065dc76984b899b52ea5bd6ed3, type: 3}
+--- !u!198 &502785955 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4582361462604272511, guid: 178172a0a4f68a644a51d5b9407f55d3,
+    type: 3}
+  m_PrefabInstance: {fileID: 517940655}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &509276798
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3683,7 +3694,7 @@ PrefabInstance:
         type: 3}
       propertyPath: ProgressBar
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1710342807}
     - target: {fileID: 4359948901164980310, guid: c2edb2db758cb2c4b98837aa9b40da43,
         type: 3}
       propertyPath: lookDirection.y
@@ -3694,6 +3705,11 @@ PrefabInstance:
       propertyPath: audioManager
       value: 
       objectReference: {fileID: 358712657}
+    - target: {fileID: 4359948901164980310, guid: c2edb2db758cb2c4b98837aa9b40da43,
+        type: 3}
+      propertyPath: system
+      value: 
+      objectReference: {fileID: 1688434335}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2edb2db758cb2c4b98837aa9b40da43, type: 3}
 --- !u!4 &553738858 stripped
@@ -4259,6 +4275,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 111.201004
+      objectReference: {fileID: 0}
+    - target: {fileID: 7013994077018058505, guid: 766ca148d41800349a2bdf024f857138,
+        type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7013994077018058505, guid: 766ca148d41800349a2bdf024f857138,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 766ca148d41800349a2bdf024f857138, type: 3}
@@ -5955,6 +5981,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 51.270004
       objectReference: {fileID: 0}
+    - target: {fileID: 7008018815939254083, guid: 907d5e226018e7b4986c019abffcb0fc,
+        type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7008018815939254083, guid: 907d5e226018e7b4986c019abffcb0fc,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 907d5e226018e7b4986c019abffcb0fc, type: 3}
 --- !u!1 &1050415849
@@ -6892,6 +6928,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1885050844990653782, guid: 02826492807d9da46a87a6c06f21f10c,
     type: 3}
   m_PrefabInstance: {fileID: 984686853}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &1289590271 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 7013994077018058505, guid: 766ca148d41800349a2bdf024f857138,
+    type: 3}
+  m_PrefabInstance: {fileID: 711389599}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1291560574 stripped
 Transform:
@@ -8486,6 +8528,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 385110566}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1663236239 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6617984141486201951, guid: 42e29c9045810d34abc7402f0fc5b25e,
+    type: 3}
+  m_PrefabInstance: {fileID: 769210142}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9faff343470e048489db08c905db9c9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1669492055 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3250730169237957022, guid: 19b872065dc76984b899b52ea5bd6ed3,
@@ -8571,6 +8625,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7075b2d7baa049c448b52890f493eab8, type: 3}
+--- !u!198 &1688434335 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 7008018815939254083, guid: 907d5e226018e7b4986c019abffcb0fc,
+    type: 3}
+  m_PrefabInstance: {fileID: 1044148541}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1710342807 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3537815829663987393, guid: 42e29c9045810d34abc7402f0fc5b25e,
+    type: 3}
+  m_PrefabInstance: {fileID: 769210142}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9faff343470e048489db08c905db9c9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1720615216
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8932,7 +9004,7 @@ PrefabInstance:
         type: 3}
       propertyPath: ProgressBar
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1710342807}
     - target: {fileID: 1550025246178365552, guid: 9c61b6633e2e77a448e045751ab29ce4,
         type: 3}
       propertyPath: lookDirection.y
@@ -8943,6 +9015,11 @@ PrefabInstance:
       propertyPath: audioManager
       value: 
       objectReference: {fileID: 358712657}
+    - target: {fileID: 1550025246178365552, guid: 9c61b6633e2e77a448e045751ab29ce4,
+        type: 3}
+      propertyPath: system
+      value: 
+      objectReference: {fileID: 1289590271}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c61b6633e2e77a448e045751ab29ce4, type: 3}
 --- !u!4 &1759084289 stripped
@@ -9774,7 +9851,7 @@ PrefabInstance:
         type: 3}
       propertyPath: ProgressBar
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1663236239}
     - target: {fileID: 7160634391900691345, guid: 6244036c7638a0d4f8ff5fa3feaee2d8,
         type: 3}
       propertyPath: lookDirection.y
@@ -9785,6 +9862,11 @@ PrefabInstance:
       propertyPath: audioManager
       value: 
       objectReference: {fileID: 358712657}
+    - target: {fileID: 7160634391900691345, guid: 6244036c7638a0d4f8ff5fa3feaee2d8,
+        type: 3}
+      propertyPath: system
+      value: 
+      objectReference: {fileID: 502785955}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6244036c7638a0d4f8ff5fa3feaee2d8, type: 3}
 --- !u!1001 &1990568876
