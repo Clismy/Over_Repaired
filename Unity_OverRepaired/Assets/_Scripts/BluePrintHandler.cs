@@ -29,7 +29,7 @@ public class BluePrintHandler : MonoBehaviour
             }
         }
     }
-    public void ChangeRobotIcon(string type, GameObject bluePrintHolder)
+    /*public void ChangeRobotIcon(string type, GameObject bluePrintHolder)
     {
   
             if (type == "LeftArm" || type == "RightArm")
@@ -44,7 +44,7 @@ public class BluePrintHandler : MonoBehaviour
             {
                 bluePrintHolder.GetComponent<Icons>().robotPart.sprite = robotSprites[2];
             }
-    }
+    }*/
 
     public void removeOldBluePrints(BrokenRobot br) {
         for (int y = 0; y < br.howManyBrokenParts; y++) {
@@ -80,7 +80,7 @@ public class BluePrintHandler : MonoBehaviour
                     if (u < robotPart[j].repairOrderStack.Count)
                     {
                         int offset = robotPart[j].repairOrder.Length - robotPart[j].repairOrderStack.Count;
-                        ChangeRobotIcon(robotPart[j].whatPart.ToString(), bluePrintHolder[i]);
+                        //ChangeRobotIcon(robotPart[j].whatPart.ToString(), bluePrintHolder[i]);
                         bluePrintHolder[i].GetComponent<Icons>().icons[u].sprite = lookUpTable[robotPart[j].repairOrder[u + offset]];
                     }
                     else

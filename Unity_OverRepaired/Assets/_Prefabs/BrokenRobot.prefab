@@ -57,7 +57,7 @@ MonoBehaviour:
   - {fileID: 1761974379072320822, guid: a3cc2dcff21d9484e9946f2662f6fde9, type: 3}
   - {fileID: 2259385937061793482, guid: f5d9e621ca4d4714a859bc8e5d666e3e, type: 3}
   - {fileID: -6224652603078791763, guid: 79992109e4326534c9a9ba17f2c515a0, type: 3}
-  speed: 1.5
+  speed: 1
   howManyBrokenParts: 2
 --- !u!65 &-5070487012137360993
 BoxCollider:
