@@ -112,7 +112,7 @@ MonoBehaviour:
   - Screw
   - Hammer
   - Paint
-  randomAmount: 1
+  randomAmount: 0
   whatPart: 2
 --- !u!54 &-6228679514633274702
 Rigidbody:

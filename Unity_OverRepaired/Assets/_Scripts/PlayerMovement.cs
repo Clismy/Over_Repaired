@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody rb;
     Vector3 input;
     Vector3 rotVelocity;
+    bool isMoving = false;
 
     void Start()
     {
@@ -29,6 +30,15 @@ public class PlayerMovement : MonoBehaviour
         if(rb.velocity != Vector3.zero)
         {
             rotVelocity = rb.velocity;
+        }
+
+        if(Mathf.Abs(rb.velocity.x) + Mathf.Abs(rb.velocity.z) > 0)
+        {
+            isMoving = true;
+        }
+        else
+        {
+            isMoving = false;
         }
     }
 

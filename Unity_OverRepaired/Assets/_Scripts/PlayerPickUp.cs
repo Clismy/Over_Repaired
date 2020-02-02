@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class PlayerPickUp : MonoBehaviour
 {
-    private bool pickedUp = false;
-    private bool interact = false;
+    private bool holding = false;
+    private bool interacting = false;
+    private bool throwing = false;
     GameObject pickedUpGameobject;
     GameObject interactObject;
     [SerializeField] Transform pickUpPosition;
@@ -18,11 +19,17 @@ public class PlayerPickUp : MonoBehaviour
     [SerializeField] int pickdUpLayer, droppedLayer;
     [SerializeField] bool secondPlayer = false;
 
+    GameObject throwableObject;
+
     bool findClosestFirst = false;
 
     private PlayerMovement pM;
+    [SerializeField] Animator anim;
 
     Vector3 finalPosition;
+
+    [SerializeField] float throwWaitTimer;
+    public bool animInteracting = false;
 
     void Start()
     {
@@ -39,7 +46,7 @@ public class PlayerPickUp : MonoBehaviour
 
         finalPosition = pickUpPosition.position;
 
-        if (Input.GetButton(interactName) && pickedUp)
+        if (Input.GetButton(interactName) && holding)
         {
             if (!findClosestFirst)
             {
@@ -52,11 +59,11 @@ public class PlayerPickUp : MonoBehaviour
             {
                 if(interactObject.GetComponent<BrokenRobot>().setPart(pickedUpGameobject.GetComponent<RobotPart>()))
                 {
-                    pickedUp = false;
+                    holding = false;
                     pickedUpGameobject = null;
                     interactObject = null;
                     findClosestFirst = false;
-                    interact = false;
+                    interacting = false;
                 }
             }
             else
@@ -64,12 +71,13 @@ public class PlayerPickUp : MonoBehaviour
                 if (interactObject == null)
                 {
                     DropObject(pickedUpGameobject);
-                    pickedUp = false;
+                    holding = false;
                     pickedUpGameobject = null;
                 }
                 else
                 {
-                    interact = true;
+                    interacting = true;
+                    animInteracting = true;
 
                     if (interactObject.GetComponent<RepairStation>().work(pickedUpGameobject.GetComponent<RobotPart>()))
                     {
@@ -79,25 +87,25 @@ public class PlayerPickUp : MonoBehaviour
                     else
                     {
                         pM.ContinueMovement();
-                        interact = false;
+                        interacting = false;
                     }
                 }
             }
         }
-        else if(Input.GetButtonUp(interactName))    
+        else if(Input.GetButtonUp(interactName))
         {
             interactObject?.GetComponent<RepairStation>()?.resetWork();
 
-            interact = false;
+            interacting = false;
             interactObject = null;
             findClosestFirst = false;
 
             pM.ContinueMovement();
         }
 
-        if (Input.GetButtonDown(pickUpName) && !interact)
+        if (Input.GetButtonDown(pickUpName) && !interacting)
         {
-            if(!pickedUp)
+            if(!holding)
             {
                 var closest = GetClosest(pickUpHits);
 
@@ -106,21 +114,35 @@ public class PlayerPickUp : MonoBehaviour
                 if (pickedUpGameobject != null)
                 {
                     PickUpObject(pickedUpGameobject);
-                    pickedUp = true;
+                    holding = true;
                 }
             }
-            else if(pickedUp)
+            else if(holding)
             {
-                ThrowObject(pickedUpGameobject);
-                pickedUp = false;
+                //ThrowObject(pickedUpGameobject);
+                throwableObject = pickedUpGameobject;
+                throwing = true;
+                holding = false;
                 pickedUpGameobject = null;
             }
         }
 
-        if (pickedUp && !interact)
+        if (holding && !interacting)
         {
             pickedUpGameobject.transform.position = finalPosition;
             pickedUpGameobject.transform.rotation = pickUpPosition.rotation;
+        }
+
+        if(throwing)
+        {
+            throwableObject.transform.position = finalPosition;
+
+            if(anim.GetCurrentAnimatorStateInfo(1).IsName("Throw") && anim.GetCurrentAnimatorStateInfo(1).normalizedTime > throwWaitTimer)
+            {
+                ThrowObject(throwableObject);
+                throwableObject = null;
+                throwing = false;
+            }
         }
     }
 
@@ -171,5 +193,24 @@ public class PlayerPickUp : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, sphereRadius);
+    }
+
+    public bool GetIfHolding()
+    {
+        return holding;
+    }
+    public bool GetIfInteracting()
+    {
+        return interacting;
+    }
+
+    public bool GetIfThrow()
+    {
+        return throwing;
+    }
+
+    public void SetThrowToFalse()
+    {
+        throwing = false;
     }
 }
