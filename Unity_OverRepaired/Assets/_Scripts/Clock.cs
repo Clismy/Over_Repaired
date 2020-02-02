@@ -26,7 +26,7 @@ public class Clock : MonoBehaviour
     void ChangeSecondsToMinutes()
     {
         timeMinutes += 1.0f;
-        timeSeconds -= 10.0f;
+        timeSeconds -= 30.0f;
         if (timeMinutes == endTimeStart)
         {
             EndGame();
@@ -42,7 +42,7 @@ public class Clock : MonoBehaviour
     void Update()
     {
         timeSeconds += Time.deltaTime * 2;
-        if (timeSeconds > 10.0f)
+        if (timeSeconds > 30.0f)
         {
             ChangeSecondsToMinutes();
         }

@@ -26,7 +26,7 @@ public class PlayerAnimation : MonoBehaviour
     {
         float isMoving = 0;
 
-        if (Mathf.Abs(rb.velocity.x) + Mathf.Abs(rb.velocity.z) > 0)
+        if (Mathf.Abs(pM.GetInput().x) + Mathf.Abs(pM.GetInput().z) > 0)
         {
             isMoving = 1;
         }
@@ -35,11 +35,6 @@ public class PlayerAnimation : MonoBehaviour
 
         anim.SetBool("Throw", pP.GetIfThrow());
         anim.SetBool("Hold", pP.GetIfHolding());
-        if(pP.animInteracting)
-        {
-            anim.SetBool("Interacting", pP.animInteracting);
-            pP.animInteracting = false;
-        }
         anim.SetBool("Interacting", pP.GetIfInteracting());
     }
 }

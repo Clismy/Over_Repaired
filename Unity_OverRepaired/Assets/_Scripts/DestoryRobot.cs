@@ -4,26 +4,36 @@ using UnityEngine;
 
 public class DestoryRobot : MonoBehaviour
 {
-
+    public ScoreBored sb;
+    private BrokenRobot br;
+    public BluePrintHandler bph;
     private void OnTriggerEnter(Collider collision)
     {
         var robot = collision.gameObject.GetComponent<BrokenRobot>();
+        br = robot;
         if (robot != null)
         {
-            int numberOfBrokenParts = 0;
-            for (int i = 0; i < robot.parts.Length; i++)
-            {
-                if (robot.transform.GetChild(i).childCount > 0)
-                {
-                    if (!robot.transform.GetChild(i).GetChild(0).GetComponent<RobotPart>().isBroken)
-                    {
-                        continue;
-                    }
-                }
-                numberOfBrokenParts++;
-            }
-
+            UpdateScore();
             Destroy(robot.gameObject,4);
+            collision.GetComponent<Collider>().enabled = false;
         }
+    }
+
+    private void UpdateScore()
+    {
+        int numberOfBrokenParts = 0;
+        for (int i = 0; i < br.parts.Length; i++)
+        {
+            if (br.transform.GetChild(i).childCount > 0)
+            {
+                if (!br.transform.GetChild(i).GetChild(0).GetComponent<RobotPart>().isBroken)
+                {
+                    sb.IncreaseScore(10);
+                    continue;
+                }
+            }
+            numberOfBrokenParts++;
+        }
+        bph.removeOldBluePrints(br);
     }
 }

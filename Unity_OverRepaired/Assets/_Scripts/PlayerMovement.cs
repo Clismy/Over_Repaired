@@ -79,7 +79,10 @@ public class PlayerMovement : MonoBehaviour
 
     void RotateTowardsVelocity()
     {
-        transform.rotation = Quaternion.LookRotation(rotVelocity, Vector3.up);
+        if(!stopMoving)
+        {
+            transform.rotation = Quaternion.LookRotation(rotVelocity, Vector3.up);
+        }
     }
 
     float GetAcceleratedInput(float newInput, float oldInput)
@@ -121,13 +124,25 @@ public class PlayerMovement : MonoBehaviour
         return direction;
     }
 
-    public void StopMovement()
+    public void StopMovement(float angle = 0)
     {
+        if(angle == 180)
+        {
+            rotVelocity = Vector3.back;
+        }
+        else if(angle == -180)
+        {
+            rotVelocity = Vector3.forward;
+        }
         stopMoving = true;
     }
 
     public void ContinueMovement()
     {
         stopMoving = false;
+    }
+    public Vector3 GetInput()
+    {
+        return input;
     }
 }
