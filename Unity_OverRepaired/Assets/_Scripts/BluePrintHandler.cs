@@ -7,6 +7,7 @@ public class BluePrintHandler : MonoBehaviour
     public List<GameObject> bluePrintHolder;
     public string name;
     public Sprite[] images = new Sprite[4];
+    public List<Sprite> robotSprites;
     private Dictionary<string, Sprite> lookUpTable = new Dictionary<string, Sprite>();
     private int index = 0;
 
@@ -28,7 +29,22 @@ public class BluePrintHandler : MonoBehaviour
             }
         }
     }
-
+    public void ChangeRobotIcon(string type, GameObject bluePrintHolder)
+    {
+  
+            if (type == "LeftArm" || type == "RightArm")
+            {
+                bluePrintHolder.GetComponent<Icons>().robotPart.sprite = robotSprites[0];
+            }
+            if (type == "LeftLeg" || type == "RightLeg")
+            {
+                bluePrintHolder.GetComponent<Icons>().robotPart.sprite = robotSprites[1];
+            }
+            if (type == "Head")
+            {
+                bluePrintHolder.GetComponent<Icons>().robotPart.sprite = robotSprites[2];
+            }
+    }
 
     public void removeOldBluePrints(BrokenRobot br) {
         for (int y = 0; y < br.howManyBrokenParts; y++) {
@@ -64,6 +80,7 @@ public class BluePrintHandler : MonoBehaviour
                     if (u < robotPart[j].repairOrderStack.Count)
                     {
                         int offset = robotPart[j].repairOrder.Length - robotPart[j].repairOrderStack.Count;
+                        ChangeRobotIcon(robotPart[j].whatPart.ToString(), bluePrintHolder[i]);
                         bluePrintHolder[i].GetComponent<Icons>().icons[u].sprite = lookUpTable[robotPart[j].repairOrder[u + offset]];
                     }
                     else

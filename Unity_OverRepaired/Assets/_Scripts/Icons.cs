@@ -5,4 +5,5 @@ using UnityEngine.UI;
 public class Icons : MonoBehaviour
 {
     public List<Image> icons = new List<Image>();
+    public Image robotPart;
 }
