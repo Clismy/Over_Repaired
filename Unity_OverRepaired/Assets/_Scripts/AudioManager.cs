@@ -5,27 +5,64 @@ using FMODUnity;
 
 public class AudioManager : MonoBehaviour
 {
-    [EventRef]
-    public string robotMove;
-    FMOD.Studio.EventInstance RobotMove;
-    FMOD.Studio.ParameterInstance Stop;
+    public PlayerMovement playerMovement1;
+    public PlayerMovement playerMovement2;
+    public StudioEventEmitter robotMove1;
+    public StudioEventEmitter robotMove2;
 
     [EventRef]
     public string robotPickup;
-
     [EventRef]
     public string robotThrow;
+    [EventRef]
+    public string hammer;
+    [EventRef]
+    public string weld;
+    [EventRef]
+    public string screw;
+    [EventRef]
+    public string paint;
 
-    public void RobotMoveStart()
+    bool moveStart1 = false;
+    bool moveStart2 = false;
+
+    void Update()
     {
-        RobotMove = FMODUnity.RuntimeManager.CreateInstance(robotMove);
-        RobotMove.getParameter("Stop", out Stop);
-        RobotMove.start();
+        if (playerMovement1.isMoving == true && moveStart1 == false)
+        {
+            moveStart1 = true;
+            RobotMove1();
+        }
+
+        else if (playerMovement1.isMoving == false)
+        {
+            moveStart1 = false;
+            robotMove1.SetParameter("Stop", 1.0f);
+        }
+
+        if (playerMovement2.isMoving == true && moveStart2 == false)
+        {
+            moveStart2 = true;
+            RobotMove2();
+        }
+
+        else if (playerMovement2.isMoving == false)
+        {
+            moveStart2 = false;
+            robotMove2.SetParameter("Stop", 1.0f);
+        }
     }
 
-    public void RobotMoveStop()
+    void RobotMove1()
     {
-        Stop.setValue(1.0f);
+        robotMove1.SetParameter("Stop", 0.0f);
+        robotMove1.Play();
+    }
+
+    void RobotMove2()
+    {
+        robotMove2.SetParameter("Stop", 0.0f);
+        robotMove2.Play();
     }
 
     public void RobotPickup()
@@ -42,19 +79,19 @@ public class AudioManager : MonoBehaviour
     {
         if(type == "Weld")
         {
-
+            RuntimeManager.PlayOneShot(weld, transform.position);
         }
         else if(type == "Hammer")
         {
-
+            RuntimeManager.PlayOneShot(hammer, transform.position);
         }
         else if(type == "Paint")
         {
-
+            RuntimeManager.PlayOneShot(paint, transform.position);
         }
         else if(type == "Screw")
         {
-
+            RuntimeManager.PlayOneShot(screw, transform.position);
         }
     }
 }
