@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody rb;
     Vector3 input;
     Vector3 rotVelocity;
-    bool isMoving = false;
+    public bool isMoving = false;
 
     void Start()
     {
