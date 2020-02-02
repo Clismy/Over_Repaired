@@ -13,7 +13,8 @@ public class PlayerPickUp : MonoBehaviour
 
     [SerializeField] float pickUpSpeed;
 
-    [SerializeField] float sphereRadius;
+    [SerializeField] float pickUpRadius;
+    [SerializeField] float interactRadius;
     [SerializeField] LayerMask collideWithPickUp, collideWithWorkBench;
     GameObject closestObject;
     [SerializeField] int pickdUpLayer, droppedLayer;
@@ -29,7 +30,6 @@ public class PlayerPickUp : MonoBehaviour
     Vector3 finalPosition;
 
     [SerializeField] float throwWaitTimer;
-    public bool animInteracting = false;
 
     void Start()
     {
@@ -38,8 +38,8 @@ public class PlayerPickUp : MonoBehaviour
 
     void Update()
     {
-        Collider[] pickUpHits = Physics.OverlapSphere(transform.position, sphereRadius, collideWithPickUp);
-        Collider[] workBenchHits = Physics.OverlapSphere(transform.position, sphereRadius, collideWithWorkBench);
+        Collider[] pickUpHits = Physics.OverlapSphere(transform.position, pickUpRadius, collideWithPickUp);
+        Collider[] workBenchHits = Physics.OverlapSphere(transform.position, interactRadius, collideWithWorkBench);
 
         string interactName = !secondPlayer ? "Interact1" : "Interact2";
         string pickUpName = !secondPlayer ? "PickUp1" : "PickUp2";
@@ -77,12 +77,15 @@ public class PlayerPickUp : MonoBehaviour
                 else
                 {
                     interacting = true;
-                    animInteracting = true;
 
-                    if (interactObject.GetComponent<RepairStation>().work(pickedUpGameobject.GetComponent<RobotPart>()))
+                    RepairStation repairS = interactObject.GetComponent<RepairStation>();
+
+                    if (repairS.work(pickedUpGameobject.GetComponent<RobotPart>()))
                     {
                         pickedUpGameobject.transform.position = interactObject.transform.GetChild(0).position;
-                        pM.StopMovement();
+                        transform.position = interactObject.transform.GetChild(1).position;
+                        transform.rotation = Quaternion.Euler(repairS.lookDirection);
+                        pM.StopMovement(repairS.lookDirection.y);
                     }
                     else
                     {
@@ -105,7 +108,7 @@ public class PlayerPickUp : MonoBehaviour
 
         if (Input.GetButtonDown(pickUpName) && !interacting)
         {
-            if(!holding)
+            if(!holding && anim.GetCurrentAnimatorStateInfo(1).IsName("Nothing Scene"))
             {
                 var closest = GetClosest(pickUpHits);
 
@@ -192,7 +195,9 @@ public class PlayerPickUp : MonoBehaviour
     void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, sphereRadius);
+        Gizmos.DrawWireSphere(transform.position, pickUpRadius);
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireSphere(transform.position, interactRadius);
     }
 
     public bool GetIfHolding()

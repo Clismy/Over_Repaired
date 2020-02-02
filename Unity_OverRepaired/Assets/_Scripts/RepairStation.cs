@@ -9,6 +9,8 @@ public class RepairStation : MonoBehaviour
     public float timer;
     public Transform placePosition;
     public WorkProgress ProgressBar;
+    public Vector3 lookDirection;
+
     public bool work(RobotPart part)
     {
         ProgressBar.Working(this);

@@ -12,7 +12,7 @@ public class SpawnBrokenRobot : MonoBehaviour
 
     public void Start()
     {
-        timer = 5;
+        timer = 19;
     }
 
     public void Update()
@@ -32,7 +32,7 @@ public class SpawnBrokenRobot : MonoBehaviour
     {
        var tempRob = Instantiate(prefab, spawnPostion);
         tempRob.CreateRobot();
-        // bph.CreateBluePrints(tempRob.getParts());
+         bph.CreateBluePrints(tempRob.getParts());
 
     }
 }

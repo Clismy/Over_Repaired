@@ -8,7 +8,7 @@ public class BluePrintHandler : MonoBehaviour
     public string name;
     public Sprite[] images = new Sprite[4];
     private Dictionary<string, Sprite> lookUpTable = new Dictionary<string, Sprite>();
-    private int index  = 0;
+    private int index = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -28,10 +28,26 @@ public class BluePrintHandler : MonoBehaviour
             }
         }
     }
-    private int getBluePrintHolderIndex()
-    {
-        index++;
-        return index-1 % 6;
+
+
+    public void removeOldBluePrints(BrokenRobot br) {
+        for (int y = 0; y < br.howManyBrokenParts; y++) {
+            for (int i = 0; i < (bluePrintHolder.Count - 1); i++)
+            {
+                var tempParentRight = bluePrintHolder[i + 1].transform.parent;
+                var tempParentLeft = bluePrintHolder[i].transform.parent;
+                Destroy(bluePrintHolder[i].gameObject);
+                var temp = Instantiate(bluePrintHolder[i + 1], tempParentLeft);
+                temp.name = "index" + i;
+                bluePrintHolder[i] = temp;
+                
+            }
+        }
+        for (int i = 0; i < br.howManyBrokenParts; i++)
+        {
+            bluePrintHolder[(bluePrintHolder.Count - 1) - i].SetActive(false);
+        }
+        index -= br.howManyBrokenParts;
     }
 
     public void CreateBluePrints(RobotPart[] robotPart)
@@ -39,7 +55,9 @@ public class BluePrintHandler : MonoBehaviour
         for (int j = 0; j < robotPart.Length; j++)
         {
             if (robotPart[j].isBroken) {
-                int i = getBluePrintHolderIndex();
+
+                int i = index;
+                index++;
                 for (int u = 0; u < robotPart[j].repairOrder.Length; u++)
                 {
                     bluePrintHolder[i].GetComponent<Icons>().icons[u].gameObject.SetActive(true);

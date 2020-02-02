@@ -15,9 +15,9 @@ public class ScoreBored : MonoBehaviour
         Score = 0;
     }
 
-    public void IncreaseScore()
+    public void IncreaseScore(int incresedScore)
     {
-        Score++;
+        Score+= incresedScore;
     }
     void ChangeText()
     {
