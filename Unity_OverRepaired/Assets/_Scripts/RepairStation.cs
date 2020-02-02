@@ -10,6 +10,7 @@ public class RepairStation : MonoBehaviour
     public Transform placePosition;
     public WorkProgress ProgressBar;
     public Vector3 lookDirection;
+    [SerializeField] AudioManager audioManager;
 
     public bool work(RobotPart part)
     {
@@ -17,6 +18,7 @@ public class RepairStation : MonoBehaviour
         if (part.getCurrentRepair() == type)
         {
             Debug.Log(timer);
+            audioManager?.Workstation(type);
             if (timer < workTime)
             {
                 timer += Time.deltaTime;

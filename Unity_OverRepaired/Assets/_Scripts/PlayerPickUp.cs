@@ -31,6 +31,8 @@ public class PlayerPickUp : MonoBehaviour
 
     [SerializeField] float throwWaitTimer;
 
+    [SerializeField] AudioManager audioManager;
+
     void Start()
     {
         pM = GetComponent<PlayerMovement>();
@@ -154,6 +156,7 @@ public class PlayerPickUp : MonoBehaviour
         objectToPickUp.GetComponent<Collider>().isTrigger = true;
         objectToPickUp.GetComponent<Rigidbody>().isKinematic = true;
         objectToPickUp.layer = pickdUpLayer;
+        audioManager?.RobotPickup();
     }
     void ThrowObject(GameObject objectToThrow)
     {
@@ -162,6 +165,7 @@ public class PlayerPickUp : MonoBehaviour
 
         objectToThrow.GetComponent<Collider>().isTrigger = false;
         objectToThrow.layer = droppedLayer;
+        audioManager?.RobotThrow();
     }
 
     void DropObject(GameObject objectToDrop)

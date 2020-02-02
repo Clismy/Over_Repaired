@@ -38,4 +38,23 @@ public class AudioManager : MonoBehaviour
         RuntimeManager.PlayOneShot(robotThrow, transform.position);
     }
 
+    public void Workstation(string type)
+    {
+        if(type == "Weld")
+        {
+
+        }
+        else if(type == "Hammer")
+        {
+
+        }
+        else if(type == "Paint")
+        {
+
+        }
+        else if(type == "Screw")
+        {
+
+        }
+    }
 }
