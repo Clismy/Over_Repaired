@@ -15,6 +15,8 @@ public class AudioManager : MonoBehaviour
     [EventRef]
     public string robotThrow;
     [EventRef]
+    public string robotDrop;
+    [EventRef]
     public string hammer;
     [EventRef]
     public string weld;
@@ -73,6 +75,11 @@ public class AudioManager : MonoBehaviour
     public void RobotThrow()
     {
         RuntimeManager.PlayOneShot(robotThrow, transform.position);
+    }
+
+    public void RobotDrop()
+    {
+        RuntimeManager.PlayOneShot(robotDrop, transform.position);
     }
 
     public void Workstation(string type)

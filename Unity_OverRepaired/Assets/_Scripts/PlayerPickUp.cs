@@ -173,6 +173,7 @@ public class PlayerPickUp : MonoBehaviour
         objectToDrop.GetComponent<Rigidbody>().isKinematic = false;
         objectToDrop.GetComponent<Collider>().isTrigger = false;
         objectToDrop.layer = droppedLayer;
+        audioManager?.RobotDrop();
     }
 
     GameObject GetClosest(Collider[] sphereHits)
