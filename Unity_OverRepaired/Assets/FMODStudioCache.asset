@@ -122,6 +122,29 @@ MonoBehaviour:
   - Name: Desktop
     Value: 1952032
   Exists: 1
+--- !u!114 &-7568683081128348350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Robot/RobotPickup
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Robot/RobotPickup
+  guid: db501948599df14db32425c2ea89f467
+  Banks:
+  - {fileID: 4049538864212562805}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 150
 --- !u!114 &-6200303835841902728
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,6 +191,46 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-5903075411488336220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/RobotMove2/Stop
+  m_EditorClassIdentifier: 
+  Name: Stop
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &-5703253513307303920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Tools/Powerdrill
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Tools/Powerdrill
+  guid: db3157df5e76984ea5305d307cfe35f2
+  Banks:
+  - {fileID: 4049538864212562805}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 780
 --- !u!114 &-5614941068832587588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -266,6 +329,29 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 1
+--- !u!114 &-5158828882277887420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/AmbienceManager
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/AmbienceManager
+  guid: 4cae6ef5fc59c3468a985a9ae1397f0e
+  Banks:
+  - {fileID: 4049538864212562805}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 30000
 --- !u!114 &-4468949712724571569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -412,6 +498,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 1905
+--- !u!114 &-2691553223151154030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Tools/Welding
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Tools/Welding
+  guid: 6e2b70f09fe81849ac8c247c36167900
+  Banks:
+  - {fileID: 4049538864212562805}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2000
 --- !u!114 &-2336498099310910657
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -431,6 +540,30 @@ MonoBehaviour:
   - Name: Desktop
     Value: 842
   Exists: 1
+--- !u!114 &-2002464625261413841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Robot/RobotMove2
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Robot/RobotMove2
+  guid: bfac83bc570911409bf7b96623b5764a
+  Banks:
+  - {fileID: 4049538864212562805}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -5903075411488336220}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2687
 --- !u!114 &-980433597835342756
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -592,6 +725,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 2687
+--- !u!114 &1687233817023710855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Tools/Spray
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Tools/Spray
+  guid: c8534e5500014d4fab4dbbc5944d3236
+  Banks:
+  - {fileID: 4049538864212562805}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2200
 --- !u!114 &1742143813360567605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -616,6 +772,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 2687
+--- !u!114 &1752487270591818292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Robot/RobotThrow
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Robot/RobotThrow
+  guid: d5da92260a198344b5d2c3d45335b8a5
+  Banks:
+  - {fileID: 4049538864212562805}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 500
 --- !u!114 &1809092395766118791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -656,6 +835,23 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 30000
+--- !u!114 &2871954569340094077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/RobotMove1/Stop
+  m_EditorClassIdentifier: 
+  Name: Stop
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
 --- !u!114 &3159467608662784326
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -716,6 +912,25 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 1965440
+  Exists: 1
+--- !u!114 &4049538864212562805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master Bank.bank
+  m_EditorClassIdentifier: 
+  Path: G:\RobotRepair\FMOD\RobotRepair\Build\Desktop\Master Bank.bank
+  lastModified: 637162506880000000
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 2641984
   Exists: 1
 --- !u!114 &4124459674814687977
 MonoBehaviour:
@@ -779,6 +994,30 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 368
+--- !u!114 &4852394577939518203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/MusicManager
+  m_EditorClassIdentifier: 
+  Path: event:/Music/MusicManager
+  guid: 3c2d12242ffc2847b21f85257e22b7c1
+  Banks:
+  - {fileID: 4049538864212562805}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 6210065989922140777}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 91200
 --- !u!114 &4878236123604155198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -844,6 +1083,25 @@ MonoBehaviour:
   - Name: Desktop
     Value: 2641984
   Exists: 1
+--- !u!114 &5717218401397266064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master Bank.strings.bank
+  m_EditorClassIdentifier: 
+  Path: G:\RobotRepair\FMOD\RobotRepair\Build\Desktop\Master Bank.strings.bank
+  lastModified: 637162506900000000
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 1224
+  Exists: 1
 --- !u!114 &5952612878304426891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -862,6 +1120,70 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 1224
+  Exists: 1
+--- !u!114 &6015391857483617725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Robot/RobotMove1
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Robot/RobotMove1
+  guid: d807481741ece340826c93c4301e0cad
+  Banks:
+  - {fileID: 4049538864212562805}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 2871954569340094077}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2687
+--- !u!114 &6037541726372750095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Tools/Hammer
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Tools/Hammer
+  guid: 9b7bbbef0aaaba4e87b49b836367bb03
+  Banks:
+  - {fileID: 4049538864212562805}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1905
+--- !u!114 &6210065989922140777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/MusicManager/Progression
+  m_EditorClassIdentifier: 
+  Name: Progression
+  Min: 0
+  Max: 1
+  Default: 0
   Exists: 1
 --- !u!114 &6411590570550677426
 MonoBehaviour:
@@ -903,6 +1225,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 2200
+--- !u!114 &6654647041980381738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Robot/RobotDrop
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Robot/RobotDrop
+  guid: 4a9deda6b4ea3e4796cdc868721fbf09
+  Banks:
+  - {fileID: 4049538864212562805}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 46
 --- !u!114 &6748654647299725144
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -966,6 +1311,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 150
+--- !u!114 &7652382742969555564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Hitmarker
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Hitmarker
+  guid: cd1471a2c761f84f914009a5defebd2a
+  Banks:
+  - {fileID: 4049538864212562805}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 461
 --- !u!114 &7673227177972130596
 MonoBehaviour:
   m_ObjectHideFlags: 0

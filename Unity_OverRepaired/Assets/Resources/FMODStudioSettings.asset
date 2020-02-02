@@ -16,7 +16,7 @@ MonoBehaviour:
   HasPlatforms: 0
   sourceProjectPath: G:\RobotRepair\FMOD\RobotRepair\RobotRepair.fspro
   SourceProjectPathUnformatted: G:\RobotRepair\FMOD\RobotRepair\RobotRepair.fspro
-  SourceBankPathUnformatted: C:\Users\b18chrka\UnityProjects_2020\OverRepaired\Unity_OverRepaired\Assets\StreamingAssets
+  SourceBankPathUnformatted: Assets\StreamingAssets
   AutomaticEventLoading: 1
   AutomaticSampleLoading: 0
   ImportType: 0
@@ -59,6 +59,7 @@ MonoBehaviour:
   - Platform: 2
     Value: 32
   Plugins: []
-  MasterBanks: []
+  MasterBanks:
+  - Master Bank
   Banks: []
   LiveUpdatePort: 9264
