@@ -26,7 +26,7 @@ public class DestoryRobot : MonoBehaviour
         {
             if (br.transform.GetChild(i).childCount > 0)
             {
-                if (!br.transform.GetChild(i).GetChild(0).GetComponent<RobotPart>().isBroken)
+                if (br.transform.GetChild(i).GetChild(0).GetComponent<RobotPart>().isRepaired)
                 {
                     sb.IncreaseScore(10);
                     continue;

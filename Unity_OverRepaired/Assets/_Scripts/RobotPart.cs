@@ -11,6 +11,8 @@ public class RobotPart : MonoBehaviour
     public string[] repairOrder = new string[4];
     public Stack<string> repairOrderStack = new Stack<string>();
     public bool randomAmount = true;
+    public bool isRepaired = false;
+    public GameObject bluePrint = null;
 
     [Serializable]
     public enum parts
@@ -60,9 +62,44 @@ public class RobotPart : MonoBehaviour
 
             if (repairOrderStack.Count == 1)
             {
+                isRepaired = true;
                 isBroken = false;
             }
             repairOrderStack.Pop();
+        }
+    }
+
+    public void UpdateHighlightBluePrint()
+    {
+        if (bluePrint != null)
+        {
+
+            for (int i = 0; i < repairOrder.Length; i++)
+            {
+                var colortest = bluePrint.GetComponent<Icons>().icons[3 - (repairOrderStack.Count - 1)].color;
+                colortest = new Color(colortest.r, colortest.g, colortest.b, 0.3f);
+                bluePrint.GetComponent<Icons>().icons[i].color = colortest;
+            }
+            var color = bluePrint.GetComponent<Icons>().icons[3 - (repairOrderStack.Count - 1)].color;
+            color = new Color(color.r, color.g, color.b, 1);
+            bluePrint.GetComponent<Icons>().icons[3 - (repairOrderStack.Count - 1)].color = color;
+        }
+    }
+
+    public void CreateHighlightBluePrint()
+    {
+        if (bluePrint != null)
+        {
+
+            for (int i = 0; i < repairOrder.Length; i++)
+            {
+                var colortest = bluePrint.GetComponent<Icons>().icons[3 - (repairOrderStack.Count - 1)].color;
+                colortest = new Color(colortest.r, colortest.g, colortest.b, 0.3f);
+                bluePrint.GetComponent<Icons>().icons[i].color = colortest;
+            }
+            var color = bluePrint.GetComponent<Icons>().icons[0].color;
+            color = new Color(color.r, color.g, color.b, 1);
+            bluePrint.GetComponent<Icons>().icons[0].color = color;
         }
     }
 }
